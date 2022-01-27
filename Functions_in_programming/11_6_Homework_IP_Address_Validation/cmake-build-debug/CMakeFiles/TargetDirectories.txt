@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Functions_in_programming/11_6_Homework_IP_Address_Validation/cmake-build-debug/CMakeFiles/11_6_Homework_IP_Address_Validation.dir
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Functions_in_programming/11_6_Homework_IP_Address_Validation/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Functions_in_programming/11_6_Homework_IP_Address_Validation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
