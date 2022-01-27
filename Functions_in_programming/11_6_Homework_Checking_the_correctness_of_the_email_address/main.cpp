@@ -71,8 +71,14 @@ int main() {
                     return -1;
                 }
             }
-        } else std::cout << "Point at the beginning or end of a side" << std::endl;
-    } else std::cout << "Some part is longer than 63-64 characters" << std::endl;
+        } else {
+            std::cout << "Point at the beginning or end of a side" << std::endl;
+            return -1;
+        }
+    } else {
+        std::cout << "Some part is longer than 63-64 characters" << std::endl;
+        return -1;
+    }
     std::cout << "Ok" << std::endl;
     return 0;
 }
