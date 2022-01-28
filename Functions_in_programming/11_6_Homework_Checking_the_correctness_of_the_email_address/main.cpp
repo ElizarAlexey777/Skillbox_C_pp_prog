@@ -46,7 +46,7 @@ int main() {
     }
 
     if ((left_side.length() >= 1 and left_side.length() < 65) and (right_side.length() >= 1 and right_side.length() < 64)) {
-        if (left_side[0] != '.' and left_side[-1] != '.' and right_side[0] != '.' and right_side[-1] != '.') {
+        if (left_side[0] != '.' and left_side[left_side.length()-1] != '.' and right_side[0] != '.' and right_side[right_side.length()-1] != '.') {
             for (int i = 0; i < left_side.length() - 1; i++) {
                 if (left_side[i] == '.' and left_side[i + 1] == '.') {
                     std::cout << "Two dots cannot be consecutive" << std::endl;
@@ -79,6 +79,6 @@ int main() {
         std::cout << "Some part is longer than 63-64 characters" << std::endl;
         return -1;
     }
-    std::cout << "Ok" << std::endl;
+    std::cout << "Yes" << std::endl;
     return 0;
 }
