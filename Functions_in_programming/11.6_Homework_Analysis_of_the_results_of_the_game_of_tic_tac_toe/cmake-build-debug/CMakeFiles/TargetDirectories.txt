@@ -1,3 +1,0 @@
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Functions_in_programming/11.6_Homework_Analysis_of_the_results_of_the_game_of_tic_tac_toe/cmake-build-debug/CMakeFiles/11_6_Homework_Analysis_of_the_results_of_the_game_of_tic_tac_toe.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Functions_in_programming/11.6_Homework_Analysis_of_the_results_of_the_game_of_tic_tac_toe/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Functions_in_programming/11.6_Homework_Analysis_of_the_results_of_the_game_of_tic_tac_toe/cmake-build-debug/CMakeFiles/rebuild_cache.dir
