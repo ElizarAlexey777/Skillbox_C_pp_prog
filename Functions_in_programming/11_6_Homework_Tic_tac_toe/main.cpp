@@ -57,7 +57,7 @@ bool check_line(std::string l1, std::string l2, std::string l3) {
     int correctness_xo = check_correctness(l1) + check_correctness(l2) + check_correctness(l3);
 
     if (result == "Petya") {
-        if (correctness_xo != -1) {
+        if (correctness_xo != 1) {
             std::cout << "Incorrect";
             return false;
         }
@@ -105,7 +105,7 @@ bool check_col(std::string l1, std::string l2, std::string l3) {
     int correctness_xo = check_correctness(l1) + check_correctness(l2) + check_correctness(l3);
 
     if (winner == "Petya") {
-        if (correctness_xo != -1) {
+        if (correctness_xo != 1) {
             std::cout << "Incorrect";
             return false;
         }
