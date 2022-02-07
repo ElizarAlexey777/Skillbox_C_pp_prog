@@ -1,5 +1,48 @@
 #include <iostream>
 
+//std::string encrypt_caesar(std::string stroka, int num_sdvig) {
+//    std::string encr_stroka;
+//    std::string up_letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//    std::string down_letter = "abcdefghijklmnopqrstuvwxyz";
+//
+//    while (num_sdvig > 26) {num_sdvig -= 26;}
+//
+//    for (int i = 0; i < stroka.length(); i++) {
+//        if (down_letter.find(stroka[i]) != std::string::npos) {
+//            int index_let = down_letter.find(stroka[i]);
+//            int cur_stroka;
+//            int cur_num_sdvig;
+//            if (index_let + num_sdvig >= down_letter.length()) {
+//                cur_num_sdvig = num_sdvig - (down_letter.length() - index_let);
+//                cur_stroka = 0;
+//            } else {
+//                cur_num_sdvig = num_sdvig;
+//                cur_stroka = index_let;
+//            }
+//            encr_stroka += down_letter[cur_stroka + cur_num_sdvig];
+//        }
+//
+//        else if (up_letter.find(stroka[i]) != std::string::npos) {
+//            int index_let = up_letter.find(stroka[i]);
+//            int cur_stroka;
+//            int cur_num_sdvig;
+//            if (index_let + num_sdvig >= up_letter.length()) {
+//                cur_num_sdvig = num_sdvig - (up_letter.length() - index_let);
+//                cur_stroka = 0;
+//            } else {
+//                cur_num_sdvig = num_sdvig;
+//                cur_stroka = index_let;
+//            }
+//            encr_stroka += up_letter[cur_stroka + cur_num_sdvig];
+//        }
+//
+//        else {
+//            encr_stroka += stroka[i];
+//        }
+//    }
+//    return encr_stroka;
+//}
+
 std::string encrypt_caesar(std::string stroka, int num_sdvig) {
     std::string encr_stroka;
     encr_stroka = stroka;

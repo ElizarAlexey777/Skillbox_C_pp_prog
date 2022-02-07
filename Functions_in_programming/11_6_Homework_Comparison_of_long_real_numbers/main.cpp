@@ -1,6 +1,7 @@
 #include <iostream>
 
 std::string get_num(std::string number, std::string part) {
+    number = std::to_string(std::stoi(number));
     std::string alph = "1234567890-.";
     int count_point = 0;
     std::string whole_part, fraction;
