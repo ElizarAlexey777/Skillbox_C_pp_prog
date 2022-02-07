@@ -65,12 +65,14 @@ int main() {
         return -1;
     }
 
-    bool first_number_bool = check_num(get_num(address, 1));
-    bool second_number_bool = check_num(get_num(address, 2));
-    bool third_number_bool = check_num(get_num(address, 3));
-    bool fourth_number_bool = check_num(get_num(address, 4));
+    bool flag_correctness = true;
+    for (int i = 1; i <= 4; i++) {
+        if (!(check_num(get_num(address, i)))) {
+            flag_correctness = false;
+        }
+    }
 
-    if (first_number_bool and second_number_bool and third_number_bool and fourth_number_bool) {
+    if (flag_correctness) {
         std::cout << "Yes" << std::endl;
     } else std::cout << "No" << std::endl;
     return 0;
