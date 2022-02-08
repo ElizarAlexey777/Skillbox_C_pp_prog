@@ -1,18 +1,10 @@
 #include <iostream>
 
 std::string get_num(std::string number, std::string part) {
-    number = std::to_string(std::stoi(number));
     std::string alph = "1234567890-.";
     int count_point = 0;
     std::string whole_part, fraction;
-    bool null_flag_whole = number[0] == '0';
-    int count_null_whole = 0;
     for (int i = 0; i < number.length(); i++) {
-        if (number[i] == '0' and null_flag_whole) {
-            count_null_whole++;
-        } else {
-            null_flag_whole = false;
-        }
         if (alph.find(number[i]) == std::string::npos) {
             std::cout << "Invalid data" << std::endl;
             return "";
@@ -27,13 +19,31 @@ std::string get_num(std::string number, std::string part) {
                 return "";
             }
             count_point += 1;
-            whole_part = number.substr(count_null_whole, i);
+            whole_part = number.substr(0, i);
             fraction = number.substr(i+1, number.length() - 1);
         }
         if (number[i] == number[number.length() - 1] and count_point == 0 and part == "whole") {
-            return number.substr(count_null_whole, i + 1);
+            return number.substr(0, i + 1);
         }
     }
+
+    bool null_flag_whole = number[0] == '0' and part == "whole";
+    int count_null_whole = 0;
+    if (null_flag_whole) {
+        for (int j = 0; j < whole_part.length(); j++) {
+            if (whole_part[0] == '0' and null_flag_whole) {
+                count_null_whole++;
+            } else {
+                null_flag_whole = false;
+            }
+        }
+        if (std::stoi(whole_part) != 0) {
+            whole_part = whole_part.substr(count_null_whole, whole_part.length());
+        } else {
+            whole_part = "0";
+        }
+    }
+
     int count_null_fract = fraction.length();
     bool null_flag_fract = fraction[fraction.length() - 1] == '0' and part == "fraction";
     if (null_flag_fract) {
