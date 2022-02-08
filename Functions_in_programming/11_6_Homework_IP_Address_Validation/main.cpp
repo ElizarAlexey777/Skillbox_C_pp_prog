@@ -69,6 +69,7 @@ int main() {
     for (int i = 1; i <= 4; i++) {
         if (!(check_num(get_num(address, i)))) {
             flag_correctness = false;
+            break;
         }
     }
 
