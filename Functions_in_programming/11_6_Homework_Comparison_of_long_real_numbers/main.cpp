@@ -74,6 +74,9 @@ std::string number_comprasion(std::string num1_whole, std::string num1_fraction,
         return "";
     }
     if (num1_whole[0] == '-' or num2_whole[0] == '-') {
+        if (num1_whole.length() <= 2 and num2_whole.length() <= 2 and std::stoi(num1_whole) == std::stoi(num2_whole)) {
+            return "equal";
+        }
         if (num2_whole[0] == '-' and num1_whole[0] != '-') {
             return "more";
         } else if (num1_whole[0] == '-' and num2_whole[0] != '-') {
