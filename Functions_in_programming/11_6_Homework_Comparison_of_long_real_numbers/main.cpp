@@ -22,39 +22,45 @@ std::string get_num(std::string number, std::string part) {
             whole_part = number.substr(0, i);
             fraction = number.substr(i+1, number.length() - 1);
         }
-        if (number[i] == number[number.length() - 1] and count_point == 0 and part == "whole") {
+        if (i == number.length() - 1 and count_point == 0 and part == "whole") {
             return number.substr(0, i + 1);
         }
     }
 
-    bool null_flag_whole = number[0] == '0' and part == "whole";
     int count_null_whole = 0;
-    if (null_flag_whole) {
-        for (int j = 0; j < whole_part.length(); j++) {
-            if (whole_part[0] == '0' and null_flag_whole) {
+    if (whole_part[0] == '0' and part == "whole") {
+        for (char j : whole_part) {
+            if (j == '0') {
                 count_null_whole++;
             } else {
-                null_flag_whole = false;
+                break;
             }
         }
-        if (std::stoi(whole_part) != 0) {
-            whole_part = whole_part.substr(count_null_whole, whole_part.length());
+        if (whole_part.length() <= 8) {
+            if (std::stoi(whole_part) != 0) {
+                whole_part = whole_part.substr(count_null_whole, whole_part.length());
+            } else {
+                whole_part = "0";
+            }
         } else {
-            whole_part = "0";
+            whole_part = whole_part.substr(count_null_whole, whole_part.length());
         }
     }
 
     int count_null_fract = fraction.length();
-    bool null_flag_fract = fraction[fraction.length() - 1] == '0' and part == "fraction";
-    if (null_flag_fract) {
+    if (fraction[fraction.length() - 1] == '0' and part == "fraction") {
         for (int j = fraction.length(); j > 0; j--) {
-            if (fraction[fraction.length() - 1] == '0' and null_flag_fract) {
+            if (fraction[j-1] == '0') {
                 count_null_fract--;
             } else {
-                null_flag_fract = false;
+                break;
             }
         }
-        fraction = fraction.substr(0, count_null_fract);
+        if (std::stoi(fraction) != 0) {
+            fraction = fraction.substr(0, count_null_fract);
+        } else {
+            fraction = "";
+        }
     }
     if (part == "whole") {
         return whole_part;
@@ -81,7 +87,7 @@ std::string number_comprasion(std::string num1_whole, std::string num1_fraction,
             return num1_fraction.length() > num2_fraction.length() ? "more" : "less";
         }
     }
-    if (std::stoi(num1_whole) == std::stoi(num2_whole)) {
+    if (num1_whole.length() <= 8 and num2_whole.length() <= 8 and std::stoi(num1_whole) == std::stoi(num2_whole)) {
         if (num1_fraction.empty() or num2_fraction.empty()) {
             return "equal";
         } else if (std::stoi(num1_fraction) == std::stoi(num2_fraction)) {
@@ -97,8 +103,21 @@ std::string number_comprasion(std::string num1_whole, std::string num1_fraction,
                 }
             }
         }
-    } else {
+    } else if (num1_whole.length() <= 8 and num2_whole.length() <= 8 and std::stoi(num1_fraction) == std::stoi(num2_fraction)) {
         for (int i = 0; i < num1_whole.length(); i++) {
+            if (num1_whole[i] != num2_whole[i]) {
+                if (num1_whole[i] > num2_whole[i]) {
+                    return "more";
+                } else {
+                    return "less";
+                }
+            }
+        }
+    } else {
+        std::string number_1 = num1_whole + num1_fraction;
+        std::string number_2 = num2_whole + num2_fraction;
+        if (number_1 == number_2) return "equal";
+        for (int i = 0; i < number_1.length(); i++) {
             if (num1_whole[i] != num2_whole[i]) {
                 if (num1_whole[i] > num2_whole[i]) {
                     return "more";
