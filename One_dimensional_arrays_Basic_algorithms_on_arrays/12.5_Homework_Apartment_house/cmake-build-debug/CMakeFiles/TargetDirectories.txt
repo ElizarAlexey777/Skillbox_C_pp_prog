@@ -1,3 +1,0 @@
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/One_dimensional_arrays_Basic_algorithms_on_arrays/12.5_Homework_Apartment_house/cmake-build-debug/CMakeFiles/12_5_Homework_Apartment_house.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/One_dimensional_arrays_Basic_algorithms_on_arrays/12.5_Homework_Apartment_house/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/One_dimensional_arrays_Basic_algorithms_on_arrays/12.5_Homework_Apartment_house/cmake-build-debug/CMakeFiles/rebuild_cache.dir
