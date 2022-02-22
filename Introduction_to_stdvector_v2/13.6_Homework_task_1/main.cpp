@@ -20,16 +20,14 @@ int main() {
     std::cout << "Enter the number you want to remove from the vector:" << std::endl;
     std::cin >> del_num;
 
-    for (int i = 0; i < integers.size();) {
-        if (integers[i] == del_num) {
-            for (int j = i; j < integers.size() - 1; j++) {
-                integers[j] = integers[j+1];
-            }
-            integers.pop_back();
-        } else {
-            i++;
+    int ind_del = 0;
+    for (int i = 0; i < integers.size(); i++) {
+        if (integers[i] != del_num) {
+            integers[ind_del] = integers[i];
+            ind_del++;
         }
     }
+    integers.resize(del_num);
 
     std::cout << "Edited vector: ";
     for (int integer : integers) {

@@ -12,16 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c33c013-ed9a-441b-9439-023c6849df4d" name="Changes" comment="commit_21_02_22_Vectors_Task_1_1">
-      <change beforePath="$PROJECT_DIR$/../../Functions_in_programming/11.6_Homework_Caesar_cipher_implementation/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Functions_in_programming/11.6_Homework_Caesar_cipher_implementation/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Functions_in_programming/11_6_Homework_Checking_the_correctness_of_the_email_address/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Functions_in_programming/11_6_Homework_Checking_the_correctness_of_the_email_address/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Functions_in_programming/11_6_Homework_Comparison_of_long_real_numbers/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Functions_in_programming/11_6_Homework_Comparison_of_long_real_numbers/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Functions_in_programming/11_6_Homework_IP_Address_Validation/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Functions_in_programming/11_6_Homework_IP_Address_Validation/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Functions_in_programming/11_6_Homework_Tic_tac_toe/cmake-build-debug/CMakeFiles/11_6_Homework_Tic_tac_toe.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Functions_in_programming/11_6_Homework_Tic_tac_toe/cmake-build-debug/CMakeFiles/11_6_Homework_Tic_tac_toe.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../13.6_Homework_Task_2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../13.6_Homework_Task_2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/13_6_Homework_task_1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/13_6_Homework_task_1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../One_dimensional_arrays_Basic_algorithms_on_arrays/12.6_Homework_Row_of_numbers/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../One_dimensional_arrays_Basic_algorithms_on_arrays/12.6_Homework_Row_of_numbers/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../One_dimensional_arrays_Basic_algorithms_on_arrays/12.6_Homework_Sorting/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../One_dimensional_arrays_Basic_algorithms_on_arrays/12.6_Homework_Sorting/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +74,9 @@
       <workItem from="1645454661540" duration="745000" />
       <workItem from="1645462030273" duration="69000" />
       <workItem from="1645462765275" duration="951000" />
+      <workItem from="1645469518311" duration="14000" />
+      <workItem from="1645469562880" duration="1059000" />
+      <workItem from="1645515238621" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="commit_21_02_22_Vectors_Task_1_1">
       <created>1645454199052</created>
@@ -122,5 +119,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit_21_02_22_Vectors_Task_1_1" />
     <option name="LAST_COMMIT_MESSAGE" value="commit_21_02_22_Vectors_Task_1_1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
