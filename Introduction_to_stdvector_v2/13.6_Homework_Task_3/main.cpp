@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 
 int main() {
     std::cout << "Task 3" << std::endl;
@@ -16,11 +16,8 @@ int main() {
     int inp = 0;
     std::cin >> inp;
     while (inp != -1) {
-        integers.push_back(inp);
-        for (int i = 0; i < integers.size(); i++) {
-            integers[i] = integers[i + 1];
-        }
-        integers.pop_back();
+        std::rotate(integers.begin(),integers.begin()-1,integers.end());
+        integers.back() = inp;
         std::cin >> inp;
     }
 
