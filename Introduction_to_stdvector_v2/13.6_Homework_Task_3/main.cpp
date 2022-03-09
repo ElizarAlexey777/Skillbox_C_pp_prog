@@ -16,8 +16,8 @@ int main() {
     int inp = 0;
     std::cin >> inp;
     while (inp != -1) {
-        std::rotate(integers.begin(),integers.begin()-1,integers.end());
         integers.back() = inp;
+        std::rotate(integers.rbegin(),integers.rbegin() + 1,integers.rend());
         std::cin >> inp;
     }
 
