@@ -11,12 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c33c013-ed9a-441b-9439-023c6849df4d" name="Changes" comment="commit_21_02_22_Vectors_Task_1_1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/13_6_Homework_task_1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/13_6_Homework_task_1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="5c33c013-ed9a-441b-9439-023c6849df4d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +71,7 @@
       <workItem from="1645462765275" duration="951000" />
       <workItem from="1645469518311" duration="14000" />
       <workItem from="1645469562880" duration="1059000" />
-      <workItem from="1645515238621" duration="3000" />
+      <workItem from="1645515238621" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="commit_21_02_22_Vectors_Task_1_1">
       <created>1645454199052</created>
@@ -99,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645454767554</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit_22_02_22_Vectors_Task_1_2">
+      <created>1645515414032</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645515414032</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,17 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit_21_02_22_Vectors_Task_1_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit_21_02_22_Vectors_Task_1_1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>24</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="commit_22_02_22_Vectors_Task_1_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit_22_02_22_Vectors_Task_1_2" />
   </component>
 </project>

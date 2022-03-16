@@ -7,19 +7,24 @@ int main() {
     int matrix_a[4][4];
     int matrix_b[4][4];
 
+    std::cout << "Enter numbers in the first matrix: " << std::endl;
+    for (auto & i : matrix_a) {
+        for (int & j : i) {
+            std::cin >> j;
+        }
+    }
+
     bool equal = true;
+    std::cout << "Enter numbers into the second matrix: " << std::endl;
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
-
-            std::cout << "Enter a number into the first matrix: " << std::endl;
-            std::cin >> matrix_a[i][j];
-            std::cout << "Enter a number into the second matrix: " << std::endl;
             std::cin >> matrix_b[i][j];
             if (matrix_a[i][j] != matrix_b[i][j]) {
                 equal = false;
             }
         }
     }
+
     std::cout << "First matrix: " << std::endl;
     for (auto & i : matrix_a) {
         for (int j : i) {
