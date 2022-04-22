@@ -13,22 +13,24 @@ void sort_vec_abs(std::vector<int> vec) {
         }
         if (flag) {
             count_sdvig += 1;
-            if (std::abs(vec[ind_first_pol + count_sdvig]) > std::abs(vec[ind_first_pol - count_sdvig])) {
-                if (ind_first_pol - count_sdvig >= 0) {
-                    std::cout << vec[ind_first_pol - count_sdvig] << ' ';
+            if (ind_first_pol - count_sdvig >= 0 and ind_first_pol + count_sdvig <= vec.size()) {
+                if (std::abs(vec[ind_first_pol + count_sdvig]) > std::abs(vec[ind_first_pol - count_sdvig])) {
+                    if (ind_first_pol - count_sdvig >= 0) {
+                        std::cout << vec[ind_first_pol - count_sdvig] << ' ';
+                    }
+                    if (ind_first_pol + count_sdvig < vec.size()) {
+                        std::cout << vec[ind_first_pol + count_sdvig] << ' ';
+                    }
+                } else {
+                    if (ind_first_pol + count_sdvig < vec.size()) {
+                        std::cout << vec[ind_first_pol + count_sdvig] << ' ';
+                    }
+                    if (ind_first_pol - count_sdvig >= 0) {
+                        std::cout << vec[ind_first_pol - count_sdvig] << ' ';
+                    }
                 }
-                if (ind_first_pol + count_sdvig < vec.size()) {
-                    std::cout << vec[ind_first_pol + count_sdvig] << ' ';
-                }
-            } else {
-                if (ind_first_pol + count_sdvig < vec.size()) {
-                    std::cout << vec[ind_first_pol + count_sdvig] << ' ';
-                }
-                if (ind_first_pol - count_sdvig >= 0) {
-                    std::cout << vec[ind_first_pol - count_sdvig] << ' ';
-                }
+                i -= 1;
             }
-            i -= 1;
         }
     }
 }
