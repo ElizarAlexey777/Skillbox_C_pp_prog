@@ -7,13 +7,13 @@ int state = 0;
 
 enum switches
 {
-    TOTAL_POWER     = 1 << 0,
-    SOCKET_POWER    = 1 << 1,
-    LIGHT_IN_HOUSE  = 1 << 2,
-    LIGHT_ON_GARDEN = 1 << 3,
-    HOUSE_HEATING   = 1 << 4,
-    WATER_HEATING   = 1 << 5,
-    CONDITIONER     = 1 << 6
+    TOTAL_POWER        = 1 << 0,
+    SOCKET_POWER       = 1 << 1,
+    LIGHT_INSIDE       = 1 << 2,
+    LIGHT_OUTSIDE      = 1 << 3,
+    HEATERS            = 1 << 4,
+    WATER_PIPE_HEATING = 1 << 5,
+    CONDITIONER        = 1 << 6
 };
 
 
@@ -31,15 +31,15 @@ bool convertLight (std::string light)
 
 void checkLightInHouse (bool lightOn)
 {
-    if ((lightOn) && ((state & LIGHT_IN_HOUSE) != LIGHT_IN_HOUSE))
+    if ((lightOn) && ((state & LIGHT_INSIDE) != LIGHT_INSIDE))
     {
-        state |= LIGHT_IN_HOUSE;
+        state |= LIGHT_INSIDE;
         std::cout << "\tLight in house is ON";
     }
     else
-    if ((state & LIGHT_IN_HOUSE) == LIGHT_IN_HOUSE)
+    if ((state & LIGHT_INSIDE) == LIGHT_INSIDE)
     {
-        state &= ~LIGHT_IN_HOUSE;
+        state &= ~LIGHT_INSIDE;
         std::cout << "\tLight in house is OFF" << std::endl;
     }
 }
@@ -47,34 +47,34 @@ void checkLightInHouse (bool lightOn)
 
 void checkTemperatureLight (int time)
 {
-    int startTime = 16;
-    int endTime = 20;
-    int hightTemperature = 5000;
-    int lowTemperature = 2700;
+    int start_time = 16;
+    int end_time = 20;
+    int high_temperature = 5000;
+    int low_temperature = 2700;
 
     std::cout << "\tIn house light temperature is ";
-    if (time < startTime)
-        std::cout << hightTemperature << 'K' << std::endl;
+    if (time < start_time)
+        std::cout << high_temperature << 'K' << std::endl;
     else
-    if (time < endTime)
-        std::cout << hightTemperature - ((hightTemperature - lowTemperature) /
-                                         (endTime - startTime) * (time - startTime)) << 'K' << std::endl;
+    if (time < end_time)
+        std::cout << high_temperature - ((high_temperature - low_temperature) /
+                                         (end_time - start_time) * (time - start_time)) << 'K' << std::endl;
     else
-        std::cout << lowTemperature << 'K' << std::endl;
+        std::cout << low_temperature << 'K' << std::endl;
 }
 
 
 void checkTemperatureOut (int temperature)
 {
-    if ((temperature < 0) & ((state & WATER_HEATING) != WATER_HEATING))
+    if ((temperature < 0) & ((state & WATER_PIPE_HEATING) != WATER_PIPE_HEATING))
     {
-        state |= WATER_HEATING;
+        state |= WATER_PIPE_HEATING;
         std::cout << "\tWater heating is ON" << std::endl;
     }
     else
-    if ((temperature > 5) & ((state & WATER_HEATING) == WATER_HEATING))
+    if ((temperature > 5) & ((state & WATER_PIPE_HEATING) == WATER_PIPE_HEATING))
     {
-        state &= ~WATER_HEATING;
+        state &= ~WATER_PIPE_HEATING;
         std::cout << "\tWater heating is OFF" << std::endl;
     }
 }
@@ -82,15 +82,15 @@ void checkTemperatureOut (int temperature)
 
 void checkTemperatureIn (int temperature)
 {
-    if ((temperature < 22) & ((state & HOUSE_HEATING) != HOUSE_HEATING))
+    if ((temperature < 22) & ((state & HEATERS) != HEATERS))
     {
-        state |= HOUSE_HEATING;
+        state |= HEATERS;
         std::cout << "\tHouse heating is ON" << std::endl;
     }
     else
-    if ((temperature >= 25) & ((state & HOUSE_HEATING) == HOUSE_HEATING))
+    if ((temperature >= 25) & ((state & HEATERS) == HEATERS))
     {
-        state &= ~HOUSE_HEATING;
+        state &= ~HEATERS;
         std::cout << "\tHouse heating is OFF" << std::endl;
     }
 }
@@ -115,16 +115,16 @@ void checkConditioner (int temperature)
 void checkLightOnGarden (int time, bool movement)
 {
     if (((time < 5 || time > 16) && movement) &
-        ((state & LIGHT_ON_GARDEN) != LIGHT_ON_GARDEN))
+        ((state & LIGHT_OUTSIDE) != LIGHT_OUTSIDE))
     {
-        state |= LIGHT_ON_GARDEN;
+        state |= LIGHT_OUTSIDE;
         std::cout << "\tLight on garden is ON" << std::endl;
     }
     else
     if (((time >= 5 && time <= 16) || !movement) &
-        ((state & LIGHT_ON_GARDEN) == LIGHT_ON_GARDEN))
+        ((state & LIGHT_OUTSIDE) == LIGHT_OUTSIDE))
     {
-        state &= ~LIGHT_ON_GARDEN;
+        state &= ~LIGHT_OUTSIDE;
         std::cout << "\tLight on garden is OFF" << std::endl;
     }
 }
