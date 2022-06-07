@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.1.2/bin/ninja/win/ninja.exe" -G Ninja C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Algorithms_on_arrays\Task_4
+"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.1.2/bin/ninja/win/ninja.exe" -G Ninja -S C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Algorithms_on_arrays\Task_4 -B C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Algorithms_on_arrays\Task_4\cmake-build-debug
 -- The C compiler identification is GNU 8.1.0
 -- The CXX compiler identification is GNU 8.1.0
 -- Detecting C compiler ABI info
