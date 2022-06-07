@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Data_types/16.4_Homework_Smart_house/cmake-build-debug/CMakeFiles/16_4_Homework_Smart_house.dir
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Data_types/16.4_Homework_Smart_house/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Data_types/16.4_Homework_Smart_house/cmake-build-debug/CMakeFiles/rebuild_cache.dir
