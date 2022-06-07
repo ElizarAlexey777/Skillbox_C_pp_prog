@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Pointers/17.4_Homework_Task1/cmake-build-debug/CMakeFiles/17_4_Homework_Task1.dir
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Pointers/17.4_Homework_Task1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Pointers/17.4_Homework_Task1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
