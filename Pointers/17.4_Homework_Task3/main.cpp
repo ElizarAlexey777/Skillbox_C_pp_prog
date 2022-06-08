@@ -2,7 +2,7 @@
 
 bool substr(char* a, char* b) {
     int i = 0;
-    bool res;
+    bool res = false;
     while (*(a+i) != '\0') {
         if (*(b) == *(a+i)) {
             int j = 0;
