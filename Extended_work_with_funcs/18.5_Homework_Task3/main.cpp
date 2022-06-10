@@ -15,7 +15,7 @@ int num_ways(int num_steps, int max_length=3) {
 
 
 int main() {
-    std::cout << "Task 2" << std::endl;
+    std::cout << "Task 3" << std::endl;
     std::cout << std::endl;
 
     int num_steps, max_l_jump;
