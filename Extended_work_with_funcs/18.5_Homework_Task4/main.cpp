@@ -1,7 +1,9 @@
 #include <iostream>
 
 void evendigits(long long number, int& ans) {
-    if (number != 0) {
+    if (number == 0 and ans == 0) {
+        ans = 1;
+    } else if (number != 0) {
         if (number % 2 == 0) ans += 1;
         evendigits(number / 10, ans);
     }
