@@ -23,6 +23,8 @@ int main() {
         }
     }
 
+    words.close();
+
     std::cout << "The number of words from the file that matched the word '" << word << "': " << count_matched_words << std::endl;
     return 0;
 }
