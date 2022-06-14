@@ -7,6 +7,7 @@ int main() {
 
     std::string path_to_file;
 
+    std::cout << "Enter file path: " << std::endl;
     std::getline(std::cin, path_to_file);
 
     std::ifstream file;
