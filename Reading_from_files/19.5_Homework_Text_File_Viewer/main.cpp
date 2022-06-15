@@ -16,7 +16,7 @@ int main() {
     if (file.is_open()) {
         while(!file.eof()) {
             char buffer[20];
-            file.read(buffer, sizeof(buffer));
+            file.read(buffer, sizeof(buffer) - 1);
             buffer[file.gcount()] = '\0';
             std::cout << buffer;
         }
