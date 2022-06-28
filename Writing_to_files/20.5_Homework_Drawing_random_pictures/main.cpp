@@ -24,13 +24,17 @@ int main() {
     pic.open("#путь_к_файлу_\"pic.txt\"");
 //    pic.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_Drawing_random_pictures\pic.txt)");
 
-    std::srand(std::time(nullptr));
+    if (pic.is_open()) {
+        std::srand(std::time(nullptr));
 
-    for (int y = 0; y < y_height; y++) {
-        for (int x = 0; x < x_width; x++) {
-            pic << std::rand() % 2;
+        for (int y = 0; y < y_height; y++) {
+            for (int x = 0; x < x_width; x++) {
+                pic << std::rand() % 2;
+            }
+            pic << std::endl;
         }
-        pic << std::endl;
+    } else {
+        std::cout << "Wrong file path! Try again..." << std::endl;
     }
 
     pic.close();
