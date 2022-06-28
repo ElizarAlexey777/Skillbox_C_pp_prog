@@ -27,8 +27,8 @@ int main() {
     std::string name_surname;
 
     std::ofstream bill;
-//    bill.open("#путь_к_файлу_\"bill.txt\"");
-    bill.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_Entry_in_the_ledger\bill.txt)", std::ios::app);
+    bill.open("#путь_к_файлу_\"bill.txt\"");
+//    bill.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_Entry_in_the_ledger\bill.txt)", std::ios::app);
 
     std::cout << R"(Enter "Exit" in the first and last name line to end the program)" << std::endl;
     bool flag = true;
