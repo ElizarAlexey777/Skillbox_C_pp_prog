@@ -33,28 +33,29 @@ int main() {
     std::cout << R"(Enter "Exit" in the first and last name line to end the program)" << std::endl;
     bool flag = true;
 
-    do {
-        std::cout << "Enter the name and surname of the payee:" << std::endl;
-        std::getline(std::cin, name_surname);
-        if (!check_exit(name_surname)) {
-            break;
-        }
-
+    if (bill.is_open()) {
         do {
-            std::cout << "Enter payment date: (format DD/MM/YY)" << std::endl;
-            std::cin >> date_payment;
-        } while(!check_date_payment(date_payment));
+            std::cout << "Enter the name and surname of the payee:" << std::endl;
+            std::getline(std::cin, name_surname);
+            if (!check_exit(name_surname)) {
+                break;
+            }
 
-        std::cout << "Enter the payout amount:" << std::endl;
-        std::cin >> payment;
+            do {
+                std::cout << "Enter payment date: (format DD/MM/YY)" << std::endl;
+                std::cin >> date_payment;
+            } while (!check_date_payment(date_payment));
 
-        bill << name_surname << " " << date_payment << " " << payment << "\n";
-        std::cout << "User " << name_surname << " data was successfully written!" << std::endl;
-        std::cout << std::endl;
+            std::cout << "Enter the payout amount:" << std::endl;
+            std::cin >> payment;
 
-        std::cin.ignore(256,'\n');
+            bill << name_surname << " " << date_payment << " " << payment << "\n";
+            std::cout << "User " << name_surname << " data was successfully written!" << std::endl;
+            std::cout << std::endl;
+
+            std::cin.ignore(256, '\n');
+        } while (true);
     }
-    while (true);
 
     bill.close();
 
