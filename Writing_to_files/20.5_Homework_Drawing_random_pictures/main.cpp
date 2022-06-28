@@ -21,8 +21,8 @@ int main() {
     }
 
     std::ofstream pic;
-//    bill.open("#путь_к_файлу_\"pic.txt\"");
-    pic.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_Drawing_random_pictures\pic.txt)");
+    pic.open("#путь_к_файлу_\"pic.txt\"");
+//    pic.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_Drawing_random_pictures\pic.txt)");
 
     std::srand(std::time(nullptr));
 
