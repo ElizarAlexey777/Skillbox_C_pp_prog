@@ -55,6 +55,8 @@ int main() {
 
             std::cin.ignore(256, '\n');
         } while (true);
+    } else {
+        std::cout << "Wrong file path! Try again..." << std::endl;
     }
 
     bill.close();
