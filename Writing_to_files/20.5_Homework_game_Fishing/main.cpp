@@ -12,12 +12,12 @@ int main() {
     std::cin >> fish_type;
 
     std::ifstream river;
-//    river.open("#путь_к_файлу_\"river.txt\"");
-    river.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_game_Fishing\river.txt)");
+    river.open("#путь_к_файлу_\"river.txt\"");
+//    river.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_game_Fishing\river.txt)");
 
     std::ofstream basket;
-//    basket.open("#путь_к_файлу_\"basket.txt\"");
-    basket.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_game_Fishing\basket.txt)", std::ios::app);
+    basket.open("#путь_к_файлу_\"basket.txt\"");
+//    basket.open(R"(C:\Users\User\Desktop\Elizarov_Alexey\C++\Skillbox_C_pp_prog\Writing_to_files\20.5_Homework_game_Fishing\basket.txt)", std::ios::app);
 
     if (river.is_open() and basket.is_open()) {
 
