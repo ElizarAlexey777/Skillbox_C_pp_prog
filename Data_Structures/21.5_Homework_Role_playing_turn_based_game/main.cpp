@@ -13,20 +13,17 @@ struct coordinate {
 struct characters {
     std::string name;
     bool enemy;
-    int health; //50 - 150
-    int armor; //0 - 50
-    int damage; //15 - 30
+    int health;
+    int armor;
+    int damage;
     coordinate point;
 };
 
-bool overlap(int x, int y, std::vector<characters> &person, int index, bool isEnemy)
-{
-    for(int i = index-1; i >= 0; --i)
-    {
+bool overlap(int x, int y, std::vector<characters> &person, int index, bool isEnemy) {
+    for (int i = index-1; i >= 0; --i) {
         if(person[i].point.x == x && person[i].point.y == y) return true;
     }
-    if(isEnemy)
-    {
+    if (isEnemy) {
         person[index].point.x = x;
         person[index].point.y = y;
     }
@@ -34,8 +31,7 @@ bool overlap(int x, int y, std::vector<characters> &person, int index, bool isEn
 }
 
 void initEnemy(std::vector<characters> &enemy) {
-    for(int i = 0; i < enemy.size(); ++i)
-    {
+    for(int i = 0; i < enemy.size(); ++i) {
         enemy[i].name = "Enemy #" + std::to_string(i+1);
         enemy[i].enemy = true;
         enemy[i].health = (rand() % 101) + 50;
@@ -147,7 +143,7 @@ void attacks(coordinate &point, characters &attack, characters &player, std::vec
 }
 
 void save(characters &player, std::vector<characters> &enemy) {
-    std::ofstream file("save.bin", std::ios::binary);
+    std::ofstream file("save.bin", std::ios::binary); // путь к файлу "save.bin"
     if (file.is_open()) {
         int len = player.name.length();
         file.write((char*)&len, sizeof(len));
@@ -170,15 +166,16 @@ void save(characters &player, std::vector<characters> &enemy) {
             file.write((char*)&enemy[i].point.x, sizeof(enemy[i].point.x));
             file.write((char*)&enemy[i].point.y, sizeof(enemy[i].point.y));
         }
+        std::cout << "The game has been successfully saved!" << std::endl;
         file.close();
     } else {
-        std::cout << "File not found." << std::endl;
+        std::cout << "File not found..." << std::endl;
     }
 }
 
 void load(characters &player, std::vector<characters> &enemy) {
-    std::ifstream file("save.bin", std::ios::binary);
-    if(file.is_open()) {
+    std::ifstream file("save.bin", std::ios::binary); // путь к файлу "save.bin"
+    if (file.is_open()) {
         int len;
         file.read((char*)&len, sizeof(len));
         player.name.resize(len);
@@ -202,10 +199,11 @@ void load(characters &player, std::vector<characters> &enemy) {
             file.read((char*)&enemy[i].point.x, sizeof(enemy[i].point.x));
             file.read((char*)&enemy[i].point.y, sizeof(enemy[i].point.y));
         }
+        std::cout << "The last game save was loaded successfully!" << std::endl;
         file.close();
         displayField(player, enemy);
     } else {
-        std::cout << "File not found." << std::endl;
+        std::cout << "File not found..." << std::endl;
     }
 }
 
