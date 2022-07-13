@@ -3,88 +3,42 @@
 #include <cmath>
 
 struct vec {
-    float x1 = 0;
-    float y1 = 0;
-    float x2 = 0;
-    float y2 = 0;
+    double x;
+    double y;
 };
 
-void add() {
-    float coords;
-    vec vector;
-    std::cout << "Input coords of the first vector: (x:y)" << std::endl;
-    std::cin >> coords;
-    vector.x1 = coords;
-    std::cin >> coords;
-    vector.y1 = coords;
 
-    std::cout << "Input coords of the second vector: (x:y)" << std::endl;
-    std::cin >> coords;
-    vector.x2 = coords;
-    std::cin >> coords;
-    vector.y2 = coords;
-
-    std::cout << "The coordinates of the resulting vector: X = " << vector.x1 + vector.x2 << ", Y = " << vector.y1 + vector.y2 << std::endl;
+vec add(vec vec1, vec vec2) {
+    vec result;
+    result.x = vec1.x + vec2.x;
+    result.y = vec1.y + vec2.y;
+    return result;
 }
 
-void subtract() {
-    float coords;
-    vec vector;
-    std::cout << "Input coords of the first vector: (x:y)" << std::endl;
-    std::cin >> coords;
-    vector.x1 = coords;
-    std::cin >> coords;
-    vector.y1 = coords;
-
-    std::cout << "Input coords of the second vector: (x:y)" << std::endl;
-    std::cin >> coords;
-    vector.x2 = coords;
-    std::cin >> coords;
-    vector.y2 = coords;
-
-    std::cout << "The coordinates of the resulting vector: X = " << vector.x1 - vector.x2 << ", Y = " << vector.y1 - vector.y2 << std::endl;
+vec substract(vec vec1, vec vec2) {
+    vec result;
+    result.x = vec1.x - vec2.x;
+    result.y = vec1.y - vec2.y;
+    return result;
 }
 
-void length() {
-    float coords;
-    vec vector;
-    std::cout << "Input coords of the vector: (x:y)" << std::endl;
-    std::cin >> coords;
-    vector.x1 = coords;
-    std::cin >> coords;
-    vector.y1 = coords;
-
-    std::cout << "Vector length: " << std::sqrt(std::abs(std::pow(vector.x1, 2) + std::pow(vector.y1, 2))) << std::endl;
+vec scale(vec vector, float scale_num) {
+    vec result;
+    result.x = vector.x * scale_num;
+    result.y = vector.y * scale_num;
+    return result;
 }
 
-void scale() {
-    float coords;
-    vec vector;
-    std::cout << "Input coords of the vector: (x:y)" << std::endl;
-    std::cin >> coords;
-    vector.x1 = coords;
-    std::cin >> coords;
-    vector.y1 = coords;
-
-    std::cout << "Input scale:" << std::endl;
-    float scale;
-    std::cin >> scale;
-
-    std::cout << "The coordinates of the resulting vector: X = " << vector.x1 * scale << ", Y = " << vector.y1 * scale << std::endl;
+float length(vec vector) {
+    return std::sqrt(std::pow(vector.x, 2) + std::pow(vector.y, 2));
 }
 
-void normalize() {
-    float coords;
-    vec vector;
-    std::cout << "Input coords of the vector: (x:y)" << std::endl;
-    std::cin >> coords;
-    vector.x1 = coords;
-    std::cin >> coords;
-    vector.y1 = coords;
-
-    double normal = std::sqrt(std::abs(std::pow(vector.x1, 2) + std::pow(vector.y1, 2)));
-
-    std::cout << "The coordinates of the resulting vector: X = " << vector.x1 / normal << ", Y = " << vector.y1 / normal << std::endl;
+vec normalize(vec vector) {
+    vec result;
+    float scale = length(vector);
+    result.x = vector.x / scale;
+    result.y = vector.y / scale;
+    return result;
 }
 
 int main() {
@@ -98,14 +52,60 @@ int main() {
     std::cin >> operation;
 
     if (operation == "add") {
-        add();
-    } else if (operation == "subtract"){
-        subtract();
-    } else if (operation == "scale"){
-        scale();
-    } else if (operation == "length"){
-        length();
-    } else if (operation == "normalize"){
-        normalize();
+        vec vec1, vec2, result;
+        std::cout << "Input coords of the first vector: (x:y)" << std::endl;
+        std::cin >> vec1.x >> vec1.y;
+
+        std::cout << "Input coords of the second vector: (x:y)" << std::endl;
+        std::cin >> vec2.x >> vec2.y;
+
+        result = add(vec1, vec2);
+
+        std::cout << "The coordinates of the resulting vector: X = " << result.x << ", Y = " << result.y << std::endl;
+
+    } else if (operation == "subtract") {
+        vec vec1, vec2, result;
+        std::cout << "Input coords of the first vector: (x:y)" << std::endl;
+        std::cin >> vec1.x >> vec1.y;
+
+        std::cout << "Input coords of the second vector: (x:y)" << std::endl;
+        std::cin >> vec2.x >> vec2.y;
+
+        result = substract(vec1, vec2);
+
+        std::cout << "The coordinates of the resulting vector: X = " << result.x << ", Y = " << result.y << std::endl;
+
+    } else if (operation == "scale") {
+        vec vector, result;
+        float scale_num;
+
+        std::cout << "Input coords of the vector: (x:y)" << std::endl;
+        std::cin >> vector.x >> vector.y;
+
+        std::cout << "Input scale:" << std::endl;
+        std::cin >> scale_num;
+
+        result = scale(vector, scale_num);
+
+        std::cout << "The coordinates of the resulting vector: X = " << result.x << ", Y = " << result.y << std::endl;
+
+    } else if (operation == "length") {
+        vec vector;
+
+        std::cout << "Input coords of the vector: (x:y)" << std::endl;
+        std::cin >> vector.x >> vector.y;
+
+        std::cout << "Vector length: " << length(vector) << std::endl;
+
+    } else if (operation == "normalize") {
+        vec vector, result;
+
+        std::cout << "Input coords of the vector: (x:y)" << std::endl;
+        std::cin >> vector.x >> vector.y;
+
+        result = normalize(vector);
+
+        std::cout << "The coordinates of the resulting vector: X = " << result.x << ", Y = " << result.y << std::endl;
+
     } else std::cout << "Unknown operation..." << std::endl;
 }
