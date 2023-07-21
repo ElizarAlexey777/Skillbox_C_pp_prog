@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 3.21)
-project(14_6_Homework_Multiplication_of_a_matrix_by_vector)
-
-set(CMAKE_CXX_STANDARD 23)
-
-add_executable(14_6_Homework_Multiplication_of_a_matrix_by_vector main.cpp)
