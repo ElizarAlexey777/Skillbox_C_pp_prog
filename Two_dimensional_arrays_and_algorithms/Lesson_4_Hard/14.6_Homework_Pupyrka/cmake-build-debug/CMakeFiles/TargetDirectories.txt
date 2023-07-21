@@ -1,3 +1,0 @@
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Lesson_4_Hard/14.6_Homework_Pupyrka/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Lesson_4_Hard/14.6_Homework_Pupyrka/cmake-build-debug/CMakeFiles/14_6_Homework_Pupyrka.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Lesson_4_Hard/14.6_Homework_Pupyrka/cmake-build-debug/CMakeFiles/edit_cache.dir
