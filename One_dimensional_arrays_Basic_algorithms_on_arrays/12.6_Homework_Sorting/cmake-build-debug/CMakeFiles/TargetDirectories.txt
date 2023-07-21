@@ -1,3 +1,0 @@
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/One_dimensional_arrays_Basic_algorithms_on_arrays/12.6_Homework_Sorting/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/One_dimensional_arrays_Basic_algorithms_on_arrays/12.6_Homework_Sorting/cmake-build-debug/CMakeFiles/12_6_Homework_Sorting.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/One_dimensional_arrays_Basic_algorithms_on_arrays/12.6_Homework_Sorting/cmake-build-debug/CMakeFiles/edit_cache.dir
