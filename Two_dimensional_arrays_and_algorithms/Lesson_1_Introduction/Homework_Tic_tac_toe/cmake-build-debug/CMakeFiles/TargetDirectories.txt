@@ -1,3 +1,0 @@
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Lesson_1_Introduction/Homework_Tic_tac_toe/cmake-build-debug/CMakeFiles/Homework_Tic_tac_toe.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Lesson_1_Introduction/Homework_Tic_tac_toe/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Lesson_1_Introduction/Homework_Tic_tac_toe/cmake-build-debug/CMakeFiles/rebuild_cache.dir
