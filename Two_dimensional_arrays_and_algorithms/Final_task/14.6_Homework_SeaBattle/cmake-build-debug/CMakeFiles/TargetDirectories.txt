@@ -1,3 +1,0 @@
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Final_task/14.6_Homework_SeaBattle/cmake-build-debug/CMakeFiles/14_6_Homework_Sea_battle.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Final_task/14.6_Homework_SeaBattle/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/User/Desktop/Elizarov_Alexey/C++/Skillbox_C_pp_prog/Two_dimensional_arrays_and_algorithms/Final_task/14.6_Homework_SeaBattle/cmake-build-debug/CMakeFiles/rebuild_cache.dir
