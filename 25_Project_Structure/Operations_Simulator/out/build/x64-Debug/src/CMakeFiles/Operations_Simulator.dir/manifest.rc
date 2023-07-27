@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Programming Apps/C++/Skillbox_2023_2024/25_Project_Structure/Operations_Simulator/out/build/x64-Debug/src/CMakeFiles/Operations_Simulator.dir/embed.manifest"
